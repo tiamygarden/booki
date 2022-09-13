@@ -116,7 +116,7 @@ gulp.task('copy:misc', () =>
 );
 
 gulp.task('copy:normalize', () =>
-  gulp.src('node_modules/normalize.css/normalize.css')
+  gulp.src('node_modules/style.css/style.css')
     .pipe(gulp.dest(`${dirs.dist}/css`))
 );
 
