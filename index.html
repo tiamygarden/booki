@@ -19,27 +19,29 @@
 </head>
 <body>
 <header>
-  <div>
-    <img src="assets/logo/Booki.png" alt="logo">
+  <img class="logo" src="images/logo/Booki.png" alt="logo">
+  <div class="navbarheader">
+    <nav>
+      <ul>
+        <li>
+          <a href="#hébergements">Hébergements</a>
+        </li>
+        <li>
+          <a href="#activités">Activités</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav>
-    <ul>
-      <li>
-        <a href="#">Hébergements</a>
-      </li>
-      <li>
-        <a href="#">Activités</a>
-      </li>
-    </ul>
-  </nav>
 </header>
 <main>
-  <H1>Trouvez votre hébergement pour des vacances de rêve</H1>
+  <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
   <p>En plein centre ville ou en pleine nature</p>
-  <input id="searchbar" onkeyup="Rechercher" type="text"
-         name="search" placeholder="Search animals..">
+  <form action="POST">
+    <input id="searchbar" onkeyup="Rechercher" type="text"
+           name="search" placeholder="Search animals.." />
+  </form>
   <h2>Filtres</h2>
-  <ul>
+  <ul class="filters">
     <li>
       <a href="#">
         Economique
@@ -62,162 +64,201 @@
     </li>
   </ul>
   <p>Plus de 500 logements sont disponibles dans cette ville</p>
-  <section>
-    <h3>Hébergements à Marseille</h3>
+  <section class="bggrey">
+    <span>
+    <h3 id="hébergements">Hébergements à Marseille</h3>
+    </span>
+    <br>
     <a href="#">
       <card>
-        <div>
-          <img src="assets/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="hotel">
+        <div class="cards">
+          <img src="images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="hotel">
+          <h4>test de Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div class="cards">
+          <img src="images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="hotel">
           <h4>Hotel Le soleil</h4>
           <p>À partir de 50€ par nuit</p>
         </div>
       </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
-    </a>
-    <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
-    </a>
-    <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
-    </a>
-    <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
-    </a>
-    <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
-    </a>
-    <aside>
-      <h3>Les plus populaires</h3>
-      <a href="#">
-        <div>
-          <img src="assets/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="hotel">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="hotel">
           <h4>Hotel Le soleil</h4>
           <p>À partir de 50€ par nuit</p>
         </div>
-      </a>
-      <a href="#">
-        <div>
-          <img src="assets/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="hotel">
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="hotel">
           <h4>Hotel Le soleil</h4>
           <p>À partir de 50€ par nuit</p>
         </div>
-      </a>
-      <a href="#">
-        <div>
-          <img src="assets/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="hotel">
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="hotel">
           <h4>Hotel Le soleil</h4>
           <p>À partir de 50€ par nuit</p>
         </div>
-      </a>
-    </aside>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
+    <a href="#">
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
+    </a>
   </section>
-  <section>
+  <aside class="bggrey">
     <h3>Les plus populaires</h3>
+    <br>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="hotel">
+          <h4>Hotel Le soleil</h4>
+          <p>À partir de 50€ par nuit</p>
+        </div>
+      </card>
     </a>
-  </section>
+  </aside>
   <section>
-    <h3>Les plus populaires</h3>
+    <h3 id="activités">Activités à Marseille</h3>
+    <br>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="activite">
+          <h4>Vieux Port</h4>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="activite">
+          <h4>Fort de Pomègues</h4>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="hotel">
-        <h4>Hotel Le soleil</h4>
-        <p>À partir de 50€ par nuit</p>
-      </div>
-    </a>
-  </section>
-  <section>
-    <h3>Activités à Marseille</h3>
-    <a href="#">
-      <div>
-        <img src="assets/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="activite">
-        <h4>Vieux Port</h4>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="activite">
+          <h4>Iles du Frioul</h4>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="activite">
-        <h4>Fort de Pomègues</h4>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="activite">
+          <h4>Parc National des Calanques</h4>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="activite">
-        <h4>Iles du Frioul</h4>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="activite">
+          <h4>Notre-Dame-de-la-Garde</h4>
+        </div>
+      </card>
     </a>
     <a href="#">
-      <div>
-        <img src="assets/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="activite">
-        <h4>Parc National des Calanques</h4>
-      </div>
-    </a>
-    <a href="#">
-      <div>
-        <img src="assets/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="activite">
-        <h4>Notre-Dame-de-la-Garde</h4>
-      </div>
-    </a>
-    <a href="#">
-      <div>
-        <img src="assets/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="activite">
-        <h4>Parc Longchamp</h4>
-      </div>
+      <card>
+        <div  class="cards">
+          <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="activite">
+          <h4>Parc Longchamp</h4>
+        </div>
+      </card>
     </a>
   </section>
 </main>

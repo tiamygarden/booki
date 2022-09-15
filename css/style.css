@@ -1,11 +1,163 @@
-*{
+* {
   box-sizing: border-box;
   width: 100%;
-  padding: 5px;
+  margin: 0;
+  color: black;
 }
 
 body {
   font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0;
+  padding-top: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0;
+  padding-top: 1em;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+  padding-top: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1em 0;
+  padding-top: 1em;
+}
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 1em 0;
+  padding-top: 1em;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+}
+
+a :hover {
+  color: #0065FC;
+}
+
+a :visited {
+  color: #DEEBFF;
+}
+
+input {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 1em 0;
+}
+
+header {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: stretch;
+  width: auto;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+  text-align: start;
+}
+
+.navbarheader {
+  display: flex;
+  justify-content: end;
+}
+
+.navbarheader ul, li {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  text-align: center;
+  width: 200px;
+}
+
+.filters{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.bggrey {
+  display: flex;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+}
+
+.cards {
+  border-radius: 5px;
+  max-width: 300px;
+  min-height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: white;
+}
+
+img {
+  border-radius: 5px;
+  max-height: 300px;
+  width: 300px;
+  margin: 0;
+}
+
+footer {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: initial;
+  color: black;
+  background-color: #F2F2F2;
 }
 
 @media screen and (min-width: 992px) {
@@ -13,5 +165,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 767px) {
 
 }
