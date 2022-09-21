@@ -1,98 +1,85 @@
-* {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0;
-  color: black;
-}
-
 body {
   font-family: 'Raleway', sans-serif;
+  width: 100%;
+  margin: 0;
 }
 
-h1 {
-  font-size: 2em;
+h1, h2, h3, h4, h5, h6, a {
   font-weight: bold;
-  margin: 1em 0;
-  padding-top: 1em;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 1em 0;
-  padding-top: 1em;
-}
-
-h3 {
-  font-size: 1.17em;
-  font-weight: bold;
-  margin: 1em 0;
-  padding-top: 1em;
-}
-
-h4 {
-  font-size: 1em;
-  font-weight: bold;
-  margin: 1em 0;
-  padding-top: 1em;
-}
-
-p {
-  font-size: 1em;
-  font-weight: normal;
-  margin: 1em 0;
-  padding-top: 1em;
 }
 
 a {
   text-decoration: none;
-  margin: 10px;
+  color: black;
 }
 
-a :hover {
+a:hover {
   color: #0065FC;
 }
 
-a :visited {
-  color: #DEEBFF;
+p {
+  margin: 5px;
 }
 
-input {
-  font-size: 1em;
-  font-weight: normal;
-  margin: 1em 0;
+.container {
+  margin: auto;
+  width: 98%;
 }
 
-header {
-  list-style: none;
-  text-decoration: none;
+.header {
+  height: 60px;
   display: flex;
-  justify-content: stretch;
-  width: auto;
-  margin: 10px 0;
-  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 auto;
+  color: #0065fc;
+}
+
+header ul li a:hover {
+  border-top: 5px solid #0065fc;
+  margin-top: -60px;
+  padding-top: 32px;
+  color: #0065fc;
+}
+
+header ul li {
+  margin-left: 25px;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   align-content: end;
   width: auto;
   margin: 10px;
   padding: 10px;
 }
 
+section{
+  display: flex;
+  margin: 0;
+}
+
 .logo {
-  height: 100px;
-  width: auto;
-  margin: 10px;
-  padding: 10px;
+  cursor: pointer;
+  height: 50px;
+  width: fit-content;
+  margin-left: 15px;
   text-align: start;
 }
 
 .navbarheader {
   display: flex;
-  justify-content: end;
+  margin-right: 2%;
 }
 
 .navbarheader ul, li {
@@ -104,70 +91,265 @@ nav {
   width: 200px;
 }
 
-.filters{
+.subtext {
+  margin-bottom: 5px;
+}
+
+.filters {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 10px 0;
   padding: 10px;
 }
 
-section {
-  display: flex;
-  width: 100%;
-  margin: 10px;
+.titrefiltres {
+  font-size: 1.3em;
+  margin: 0 20px 0 0;
 }
 
-aside{
+.titre {
+  font-weight: bold;
+  padding-right: 1.5em;
+  padding-left: 0.5em;
+  cursor: pointer;
+}
+
+.barreFiltre:hover {
+  background: #0065fc;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.barreFiltre {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  width: 20%;
-  margin: 10px;
-  padding: 10px;
+  width: auto;
+  margin-right: 2em;
+  border: 2px solid #d9d9d9;
+  border-radius: 2em;
+  font-weight: bold;
+}
+
+.filtres {
+  display: flex;
+  align-items: center;
+}
+
+.imagefiltre {
+  padding: 15px 15px;
+  border-radius: 50%;
+  background-color: #DEEBFF;
+  cursor: pointer;
+}
+
+.fas {
+  color: #0065fc;
+}
+
+.fa-map-marker-alt {
+  color: black;
+}
+
+.logosearch {
+  display: inline-flex;
+  margin-top: 50px;
+  align-items: center;
+}
+
+button {
+  background-color: #0065fc;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 0 10px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0 -50px;
+}
+
+.boutonderecherche {
+  border-radius: 0 18px 18px 0;
+  padding: 15px;
+  background-color: #0065fc;
+  color: white;
+  right: 43px;
+}
+
+.boutonderecherche:hover {
+  border-radius: 0 18px 18px 0;
+  padding: 15px;
+  background-color: #0065fc;
+  color: black;
+  right: 43px;
+}
+
+.loupelogo i {
+  display: none;
+}
+
+.iconemap {
+  font-size: 25px;
+  background-color: #f2f2f2;
+  border-radius: 1rem 0 0 1rem;
+  padding: 10px 10px;
+  width: 30px;
+  text-align: center;
+}
+
+input {
+  border-radius: 5px;
+  font-weight: bold;
+  border-right: none;
+  border-left: none;
+  border-top: #f2f2f2 1px solid;
+  border-bottom: #f2f2f2 1px solid;
+  padding: 0 1.5em;
+  width: auto;
+  height: 50px;
+  font-size: 15px;
 }
 
 .bggrey {
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  width: 70%;
+}
+
+.col70 {
   display: flex;
+  justify-content: space-around;
+  width: 68%;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.hebergement {
+  display: flex;
+  justify-content: space-around;
   border-radius: 10px;
   background-color: #F2F2F2;
 }
 
+.fas {
+  color: #0065fc;
+}
+
+.fa-map-marker-alt {
+  color: black;
+}
+
+.info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.infotext {
+  text-align: start;
+}
+
+.fa-info {
+  text-align: center;
+  padding: 2px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #d9d9d9;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
 .cards {
-  border-radius: 5px;
-  max-width: 300px;
-  min-height: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  margin: 5px;
+  padding: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: white;
+  border-radius: 5px;
+}
+
+.etoiles {
+  margin: 3px 10px;
+}
+
+.fa-chart-line {
+  display: flex;
+  justify-content: end;
+}
+
+.imghotel {
+  width: 300px;
+  height: 200px;
+}
+
+
+.activytis {
+  width: 98%;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.titleactivite {
+  width: 98%;
+}
+
+.activitiscards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.imgactivity {
+  width: 300px;
+  height: 200px;
+}
+
+.col25 {
+  width: 23%;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.activite {
+  display: flex;
+  flex-direction: column;
   background: white;
 }
 
-img {
-  border-radius: 5px;
-  max-height: 300px;
-  width: 300px;
-  margin: 0;
-}
-
 footer {
+  padding: 0;
   margin: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: initial;
   color: black;
   background-color: #F2F2F2;
 }
 
-@media screen and (min-width: 992px) {
-
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 992px) {
 
 }
 
 @media screen and (max-width: 767px) {
 
 }
+
+
