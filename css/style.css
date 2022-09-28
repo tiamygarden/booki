@@ -25,8 +25,27 @@ time, mark, audio, video {
 body {
     font-family: 'Raleway', sans-serif;
     background: white;
+    box-sizing: content-box;
     width: 100%;
     margin: 0;
+}
+
+#container {
+    margin: 0 auto;
+    width: 98%;
+    contain: content;
+}
+
+@media screen and (max-width: 992px) {
+    #container {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #container {
+        width: auto;
+    }
 }
 
 h1 {
@@ -39,7 +58,7 @@ a:hover {
 }
 
 p {
-    margin: 5px;
+    margin: 5px 0;
 }
 
 form p {
@@ -62,6 +81,14 @@ header ul {
     color: #0065fc;
 }
 
+@media screen and (max-width: 767px) {
+    header ul {
+        padding: 0;
+        margin: 0 0 0 auto;
+        color: #0065fc;
+    }
+}
+
 header ul li a:hover {
     border-top: 5px solid #0065fc;
     margin-top: -60px;
@@ -69,18 +96,55 @@ header ul li a:hover {
     color: #0065fc;
 }
 
+@media screen and (max-width: 767px) {
+    header ul li a:active {
+        width: 100%;
+        border-top: none;
+        border-bottom: 5px solid #f2f2f2;
+        padding-bottom: 15px;
+    }
+}
+
+header ul li a:active {
+    width: 100%;
+    border-top: none;
+    border-bottom: 5px solid #0065fc;
+    padding-bottom: 15px;
+    color: #0065fc;
+}
+
 header ul li {
     margin-left: 25px;
 }
 
+@media screen and (max-width: 767px) {
+    header ul li {
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 nav {
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     justify-content: space-around;
     align-content: end;
     width: auto;
     margin: 10px;
     padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    nav {
+        /*display: flex;*/
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: end;
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
 }
 
 button {
@@ -105,6 +169,542 @@ input {
     width: auto;
     height: 50px;
     font-size: 15px;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+.logo {
+    cursor: pointer;
+    height: 50px;
+    width: fit-content;
+    margin-left: 15px;
+    text-align: start;
+}
+
+.navbar_header {
+    margin-right: 2%;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar_header {
+        display: flex;
+    }
+}
+
+.navbar_header ul, li {
+    justify-content: end;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar_header ul, li {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+}
+
+.subtext {
+    margin-bottom: 5px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 20px;
+    padding: 10px 0;
+}
+
+.title_filters {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .title_filters {
+        font-size: 1.1em;
+        margin: 0;
+    }
+}
+
+.titre {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    cursor: pointer;
+}
+
+.bar_filter {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0 8px;
+    border: 2px solid #d9d9d9;
+    border-radius: 2em;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.bar_filter:hover {
+    background: #0065fc;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+
+.img_filter {
+    padding: 8px 10px;
+    border-radius: 50%;
+    background-color: #DEEBFF;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
+
+.fa-map-marker-alt {
+    color: black;
+}
+
+.logo_search {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search_button {
+    border-radius: 0 18px 18px 0;
+    padding: 15px;
+    background-color: #0065fc;
+    color: white;
+    right: 43px;
+}
+
+.search_button:hover {
+    border-radius: 0 18px 18px 0;
+    padding: 15px;
+    background-color: #0065fc;
+    color: black;
+    right: 43px;
+}
+
+.loupelogo i {
+    display: none;
+}
+
+.icon_map {
+    font-size: 25px;
+    background-color: #f2f2f2;
+    border-radius: 1rem 0 0 1rem;
+    padding: 10px 10px;
+    width: 30px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.info_text {
+    text-align: start;
+}
+
+.fa-info {
+    text-align: center;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d9d9d9;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.lodgingandpop {
+    margin: 10px auto;
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 992px) {
+    .lodgingandpop {
+        margin: 10px auto;
+        width: 98%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+.hotels {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    width: 68%;
+    margin: 0 25px 0 0;
+    padding: 20px;
+    height: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .hotels {
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        width: 100%;
+        margin: 10px auto;
+        padding: 20px;
+        height: min-content;
+        order: 1;
+    }
+}
+
+.marseillelodging {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 98%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .marseillelodging {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 98%;
+        margin: 0 auto;
+    }
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.lodging {
+    width: 30%;
+    border-radius: 20px;
+    background: white;
+    padding: 4px;
+    margin: 0 5px 20px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 992px) {
+    .lodging {
+        width: 45%;
+        border-radius: 20px;
+        background: white;
+        padding: 4px;
+        margin: 0 5px 20px 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+.lodging p {
+    font-size: .9em;
+    margin: 5px 10px;
+    font-weight: 100;
+}
+
+.lodging h4 {
+    font-size: 0.9em;
+    margin: 3px 10px;
+}
+
+
+.fas {
+    color: #0065fc;
+}
+
+.end {
+    margin: auto;
+}
+
+.black {
+    color: black;
+}
+
+
+.etoiles {
+    margin: 3px 10px;
+}
+
+.grey {
+    color: #d9d9d9;
+}
+
+.flexbox {
+    display: flex;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.left {
+    justify-content: left;
+}
+
+.img_hotel {
+    background: white;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 120px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.hotelspop {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    width: 28%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .hotelspop {
+        flex-direction: row;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        width: 100%;
+        margin: 10px auto;
+        padding: 20px;
+        order: 0;
+    }
+}
+
+.cards-pop {
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .cards-pop {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 98%;
+        margin: 0 auto;
+    }
+}
+
+.card_lodging-pop {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 150px;
+    padding: 5px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 992px) {
+    .card_lodging-pop {
+        background: white;
+        border-radius: 15px;
+        width: 30%;
+        height: auto;
+        padding: 5px;
+        margin: 10px 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+/*.content-pop {*/
+/*    height: auto;*/
+/*}*/
+
+.card_lodging-pop h4 {
+    font-size: .9em;
+    margin: 7px;
+    padding-left: 5px;
+}
+
+.card_lodging-pop p {
+    margin: 0;
+    font-size: .9em;
+    padding-left: 11px;
+}
+
+.etoiles-pop {
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 10px 0 10px 11px;
+}
+
+.img_hotel-pop {
+    float: left;
+    width: 40%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    aspect-ratio: 1/1;
+}
+
+.activity-container {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.activitys {
+    display: flex;
+    height: 325px;
+    margin: 0 0 34px;
+}
+
+@media screen and (max-width: 992px) {
+    .activitys h4 {
+        font-size: .8em;
+    }
+}
+
+.col-w-25 {
+    width: 22%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.activities_cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    aspect-ratio: auto;
+}
+
+.activities_cards h4 {
+    margin: 14px;
+}
+
+.activities_cards-70 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    width: 100%;
+    height: 55%;
+    margin: 0 0 30px 0;
+    padding: 0;
+    aspect-ratio: auto;
+}
+
+.activities_cards-70 h4 {
+    margin: 14px;
+}
+
+.activities_cards-50 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    width: 100%;
+    height: 45%;
+    margin: 0 auto;
+    padding: 0;
+    aspect-ratio: auto;
+}
+
+.activities_cards-50 h4 {
+    margin: 14px;
+}
+
+.activities_cards-30 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    width: 100%;
+    height: 35%;
+    margin: 0 auto;
+    padding: 0;
+    aspect-ratio: auto;
+}
+
+.activities_cards-30 h4 {
+    margin: 14px;
+}
+
+.img_activity {
+    width: 100%;
+    height: 84%;
+    border-radius: 20px 20px 0 0;
+    aspect-ratio: 1/1;
+}
+
+.img_activity-h-70 {
+    width: 100%;
+    height: 69%;
+    border-radius: 20px 20px 0 0;
+    aspect-ratio: 1/1;
+}
+
+.img_activity-h-50 {
+    width: 100%;
+    height: 65%;
+    border-radius: 20px 20px 0 0;
+    aspect-ratio: 1/1;
+}
+
+.img_activity-h-30 {
+    width: 100%;
+    height: 54%;
+    border-radius: 20px 20px 0 0;
+    aspect-ratio: 1/1;
+}
+
+.position-top {
+    object-position: top;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    color: black;
+    background-color: #F2F2F2;
+}
+
+footer nav {
+    width: 80%;
+    margin: 15px 15px 15px 40px;
+    padding: 10px;
+}
+
+footer nav ul, li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 5px;
 }
 
 .p-1 {
@@ -293,424 +893,6 @@ input {
 
 .mt-4 {
     margin-top: 1rem;
-}
-
-#container {
-    margin: 0 auto;
-    width: 98%;
-    contain: content;
-}
-
-.header {
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.logo {
-    cursor: pointer;
-    height: 50px;
-    width: fit-content;
-    margin-left: 15px;
-    text-align: start;
-}
-
-.navbar_header {
-    display: flex;
-    margin-right: 2%;
-}
-
-.navbar_header ul, li {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: end;
-    text-align: center;
-    width: 200px;
-}
-
-.subtext {
-    margin-bottom: 5px;
-}
-
-.filters {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px 0;
-}
-
-.title_filters {
-    font-size: 1.1em;
-    margin: 0 20px 0 0;
-}
-
-.titre {
-    padding-right: 1.5em;
-    padding-left: 0.5em;
-    cursor: pointer;
-}
-
-.bar_filter {
-    display: flex;
-    align-items: center;
-    width: auto;
-    margin-right: 2em;
-    border: 2px solid #d9d9d9;
-    border-radius: 2em;
-    font-weight: bold;
-}
-
-.bar_filter:hover {
-    background: #0065fc;
-    color: #fff;
-    transition: 0.4s ease-in-out;
-    cursor: pointer;
-}
-
-
-.img_filter {
-    padding: 8px 10px;
-    border-radius: 50%;
-    background-color: #DEEBFF;
-    cursor: pointer;
-    aspect-ratio: 1/1;
-}
-
-.fa-map-marker-alt {
-    color: black;
-}
-
-.logo_search {
-    display: inline-flex;
-    align-items: center;
-}
-
-.search_button {
-    border-radius: 0 18px 18px 0;
-    padding: 15px;
-    background-color: #0065fc;
-    color: white;
-    right: 43px;
-}
-
-.search_button:hover {
-    border-radius: 0 18px 18px 0;
-    padding: 15px;
-    background-color: #0065fc;
-    color: black;
-    right: 43px;
-}
-
-.loupelogo i {
-    display: none;
-}
-
-.icon_map {
-    font-size: 25px;
-    background-color: #f2f2f2;
-    border-radius: 1rem 0 0 1rem;
-    padding: 10px 10px;
-    width: 30px;
-    text-align: center;
-}
-
-.info {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.info_text {
-    text-align: start;
-}
-
-.fa-info {
-    text-align: center;
-    padding: 2px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #d9d9d9;
-    border-radius: 100%;
-    box-sizing: border-box;
-}
-
-.lodgingandpop {
-    margin: 10px auto;
-    width: 98%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.hotels {
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    width: 68%;
-    margin: 0 25px 0 0;
-    padding: 20px;
-    height: min-content;
-}
-
-.marseillelodging {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 98%;
-    margin: 0 auto;
-}
-
-.align {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding-left: 20px;
-}
-
-.lodging {
-    width: 30%;
-    border-radius: 20px;
-    background: white;
-    padding: 4px;
-    margin: 0 5px 20px 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.lodging p {
-    font-size: .9em;
-    margin: 5px 10px;
-    font-weight: 100;
-}
-
-.lodging h4 {
-    font-size: 0.9em;
-    margin: 3px 10px;
-}
-
-
-.fas {
-    color: #0065fc;
-}
-
-.end {
-    margin: auto;
-}
-
-.black {
-    color: black;
-}
-
-
-.etoiles {
-    margin: 3px 10px;
-}
-
-.grey {
-    color: #d9d9d9;
-}
-
-.flexbox {
-    display: flex;
-    width: 100%;
-    padding-left: 15px;
-}
-
-.left {
-    justify-content: left;
-}
-
-.img_hotel {
-    background: white;
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 120px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-.hotelspop {
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    width: 28%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.cards-pop {
-    width: 85%;
-    height: 90%;
-    margin: 0 auto;
-}
-
-.card_lodging-pop {
-    background: white;
-    border-radius: 15px;
-    width: 98%;
-    height: max-content;
-    padding: 5px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/*.content-pop {*/
-/*    height: auto;*/
-/*}*/
-
-.card_lodging-pop h4 {
-    font-size: .9em;
-    margin: 7px;
-    padding-left: 5px;
-}
-
-.card_lodging-pop p {
-    margin: 0;
-    font-size: .9em;
-    padding-left: 11px;
-}
-
-.etoiles-pop {
-    display: flex;
-    justify-content: start;
-    margin: 0;
-    padding: 10px 0 10px 11px;
-}
-
-.img_hotel-pop {
-    float: left;
-    width: 40%;
-    border-radius: 15px 0 0 15px;
-    aspect-ratio: 1/1;
-}
-
-.activity-container {
-    width: 98%;
-    margin: 0 auto;
-}
-
-.activitys {
-    display: flex;
-    height: 325px;
-    margin: 0 0 34px;
-}
-
-.col-w-25 {
-    width: 22%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.col {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.activities_cards {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    aspect-ratio: auto;
-}
-
-.activities_cards-70 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-    width: 100%;
-    height: 55%;
-    margin: 0 0 30px 0;
-    padding: 0;
-    aspect-ratio: auto;
-}
-
-.activities_cards-50 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-    width: 100%;
-    height: 45%;
-    margin: 0 auto;
-    padding: 0;
-    aspect-ratio: auto;
-}
-
-.activities_cards-30 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-    width: 100%;
-    height: 35%;
-    margin: 0 auto;
-    padding: 0;
-    aspect-ratio: auto;
-}
-
-.img_activity {
-    width: 100%;
-    height: 90%;
-    border-radius: 20px 20px 0 0;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.img_activity-h-70 {
-    width: 100%;
-    height: 86%;
-    border-radius: 20px 20px 0 0;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.img_activity-h-50 {
-    width: 100%;
-    height: 80%;
-    border-radius: 20px 20px 0 0;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.img_activity-h-30 {
-    width: 100%;
-    height: 65%;
-    border-radius: 20px 20px 0 0;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-footer {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    color: black;
-    background-color: #F2F2F2;
-}
-
-footer nav{
-    width: 80%;
-    margin: 15px 15px 15px 40px;
-    padding: 10px;
-}
-
-footer nav ul,li {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-    padding: 5px;
-}
-
-@media screen and (max-width: 992px) {
-
-}
-
-@media screen and (max-width: 767px) {
-
 }
 
 
