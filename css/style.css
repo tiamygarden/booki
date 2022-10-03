@@ -3,25 +3,6 @@
     color: black;
 }
 
-/*html, body, div, span, applet, object, iframe,*/
-/*h1, h2, h3, h4, h5, h6, p, blockquote, pre,*/
-/*a, abbr, acronym, address, big, cite, code,*/
-/*del, dfn, em, img, ins, kbd, q, s, samp,*/
-/*small, strike, strong, sub, sup, tt, var,*/
-/*b, u, i, center,*/
-/*dl, dt, dd, ol, ul, li,*/
-/*fieldset, form, label, legend,*/
-/*table, caption, tbody, tfoot, thead, tr, th, td,*/
-/*article, aside, canvas, details, embed,*/
-/*figure, figcaption, footer, header, hgroup,*/
-/*menu, nav, output, ruby, section, summary,*/
-/*time, mark, audio, video {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    border: 0;*/
-/*    vertical-align: baseline;*/
-/*}*/
-
 body {
     font-family: 'Raleway', sans-serif;
     background: white;
@@ -39,28 +20,30 @@ body {
 
 @media screen and (max-width: 992px) {
     #container {
-        width: auto;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 767px) {
     #container {
         width: 100%;
-        box-sizing: content-box;
-        contain: content;
     }
 }
 
 h1 {
     font-size: 1.1em;
-    margin-top: 15px;
+    margin: 15px 0 15px 15px;
 }
 
 @media screen and (max-width: 767px) {
     h1 {
         font-size: 1.1em;
-        margin: 15px auto;
+        margin: 15px 0 15px 20px;
     }
+}
+
+.subtext p {
+    margin: 15px 0 15px 20px;
 }
 
 a:hover {
@@ -93,8 +76,6 @@ img {
 
 @media screen and (max-width: 767px) {
     .navbar_header {
-        display: flex;
-        justify-content: space-around;
         width: 100%;
         margin: 10px auto;
         padding: 10px 0;
@@ -125,7 +106,6 @@ img {
     border-top-color: white;
     margin: -10px 10px 0 0;
     padding: 30px 10px 0;
-
 }
 
 @media screen and (max-width: 767px) {
@@ -148,11 +128,8 @@ img {
 
 @media screen and (max-width: 767px) {
     .navbar_header li:hover {
-        display: flex;
-        justify-content: center;
         border-top: none;
         border-bottom: 5px solid #0065fc;
-        transform: translateY(-1px);
     }
 }
 
@@ -183,17 +160,6 @@ img {
     }
 }
 
-/*button {*/
-/*    background-color: #0065fc;*/
-/*    border: none;*/
-/*    padding: 15px 15px;*/
-/*    border-radius: 0 10px;*/
-/*    font-weight: bold;*/
-/*    font-size: 1em;*/
-/*    cursor: pointer;*/
-/*    margin: 0 -50px;*/
-/*}*/
-
 input {
     border-radius: 5px;
     font-weight: bold;
@@ -217,7 +183,6 @@ input {
 @media screen and (max-width: 767px) {
     .header {
         flex-direction: column;
-        align-items: center;
         margin: 15px 0 5px 0;
     }
 }
@@ -245,7 +210,6 @@ input {
 @media screen and (max-width: 767px) {
     .filters {
         width: 98%;
-        display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 10px auto;
@@ -255,12 +219,6 @@ input {
 .title_filters {
     font-size: 1.1em;
     margin-right: 10px;
-}
-
-@media screen and (max-width: 992px) {
-    .title_filters {
-        font-size: 1.1em;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -287,24 +245,18 @@ input {
 .bar_filter {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     width: auto;
     margin: 0 8px;
     border: 2px solid #d9d9d9;
     border-radius: 2em;
     font-weight: bold;
-    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 767px) {
     .bar_filter {
-        display: flex;
-        align-items: center;
         width: 40%;
         margin: 8px;
-        border: 2px solid #d9d9d9;
-        border-radius: 2em;
-        font-weight: bold;
-        flex-wrap: wrap;
     }
 }
 
@@ -338,7 +290,6 @@ input {
         display: flex;
         justify-content: center;
         align-content: center;
-        align-items: center;
         margin: 20px auto;
         width: 100%;
     }
@@ -409,18 +360,14 @@ input {
 }
 
 .lodgingandpop {
-    margin: 10px auto;
-    width: 98%;
     display: flex;
     justify-content: space-around;
-}
+    margin: 10px auto;
+    width: 98%;
+    }
 
 @media screen and (max-width: 992px) {
     .lodgingandpop {
-        margin: 10px auto;
-        width: 98%;
-        display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
     }
 }
@@ -437,26 +384,22 @@ input {
     background-color: #f2f2f2;
     border-radius: 15px;
     width: 68%;
+    height: auto;
     margin: 0 25px 0 0;
     padding: 20px;
-    height: auto;
 }
 
 @media screen and (max-width: 992px) {
     .hotels {
-        background-color: #f2f2f2;
-        border-radius: 15px;
         width: 100%;
-        margin: 10px auto;
-        padding: 20px;
         height: min-content;
+        margin: 10px auto;
         order: 1;
     }
 }
 
 @media screen and (max-width: 767px) {
     .hotels {
-        background-color: white;
         width: 100%;
         order: 1;
     }
@@ -472,19 +415,18 @@ input {
 
 @media screen and (max-width: 992px) {
     .marseillelodging {
-        display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
         width: 100%;
-        margin: 0 auto;
     }
 }
 
 .align {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding-left: 20px;
+    margin: 0 auto;
 }
 
 .lodging {
@@ -499,22 +441,13 @@ input {
 @media screen and (max-width: 992px) {
     .lodging {
         width: 45%;
-        border-radius: 20px;
-        background: white;
-        padding: 4px;
-        margin: 0 5px 20px 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
 @media screen and (max-width: 767px) {
     .lodging {
         width: 100%;
-        border-radius: 20px;
-        background: white;
-        padding: 4px;
         margin: 0 0 20px 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -534,7 +467,7 @@ input {
 }
 
 .end {
-    margin: auto;
+    margin-right: 40px;
 }
 
 .black {
@@ -560,7 +493,7 @@ input {
 }
 
 .img_hotel {
-    background: white;
+    background: #f2f2f2;
     border-radius: 15px 15px 0 0;
     width: 100%;
     height: 120px;
@@ -580,11 +513,8 @@ input {
 @media screen and (max-width: 992px) {
     .hotelspop {
         flex-direction: row;
-        background-color: #f2f2f2;
-        border-radius: 15px;
         width: 100%;
         margin: 10px auto;
-        padding: 20px;
         order: 1;
     }
 }
@@ -592,16 +522,17 @@ input {
 @media screen and (max-width: 767px) {
     .hotelspop {
         flex-direction: row;
-        background-color: #f2f2f2;
         border-radius: 0;
         width: 100%;
         margin: 0;
-        padding: 20px;
         order: 0;
     }
 }
 
 .cards-pop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     width: 85%;
     margin: 0 auto;
@@ -609,55 +540,38 @@ input {
 
 @media screen and (max-width: 992px) {
     .cards-pop {
-        display: flex;
-        justify-content: space-around;
         flex-direction: row;
         width: 98%;
-        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 767px) {
     .cards-pop {
-        display: flex;
-        justify-content: space-around;
         flex-direction: column;
-        align-items: center;
         width: 98%;
-        margin: 0 auto;
     }
 }
 
 .card_lodging-pop {
-    background: white;
+    background: #f2f2f2;
     border-radius: 15px;
     width: 100%;
     height: 150px;
-    padding: 5px;
     margin: 10px 0;
+    padding: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media screen and (max-width: 992px) {
     .card_lodging-pop {
-        background: white;
-        border-radius: 15px;
         width: 30%;
-        padding: 5px;
-        margin: 10px 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
 @media screen and (max-width: 767px) {
     .card_lodging-pop {
-        background: white;
-        border-radius: 15px;
         width: 100%;
         height: auto;
-        padding: 5px;
-        margin: 10px 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
@@ -683,20 +597,12 @@ input {
 
 @media screen and (max-width: 992px) {
     .etoiles-pop {
-        position: absolute;
-        display: flex;
-        justify-content: start;
-        margin: 0;
         padding: 126px 0 3px 10px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .etoiles-pop {
-        position: absolute;
-        display: flex;
-        justify-content: start;
-        margin: 0;
         padding: 103px 0 3px 10px;
     }
 }
@@ -729,7 +635,6 @@ input {
 
 @media screen and (max-width: 767px) {
     .activitys {
-        display: flex;
         flex-direction: column;
         width: 100%;
         height: max-content;
@@ -766,7 +671,6 @@ input {
 
 @media screen and (max-width: 767px) {
     .col {
-        flex-direction: column;
         height: 100%;
         margin: 0 5px 20px 5px;
         padding: 5px 0;
@@ -791,13 +695,8 @@ input {
 
 @media screen and (max-width: 767px) {
     .activities_cards {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 20px;
-        width: 100%;
         height: 193px;
         margin: 0 0 20px 0;
-        padding: 0;
-        aspect-ratio: auto;
     }
 }
 
@@ -823,13 +722,8 @@ input {
 
 @media screen and (max-width: 767px) {
     .activities_cards-70 {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 20px;
-        width: 100%;
         height: 193px;
         margin: 0 0 20px 0;
-        padding: 0;
-        aspect-ratio: auto;
     }
 }
 
@@ -855,9 +749,6 @@ input {
 
 @media screen and (max-width: 767px) {
     .activities_cards-50 {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 20px;
-        width: 100%;
         height: 193px;
         margin: 0 0 20px 0;
         padding: 0;
@@ -887,13 +778,8 @@ input {
 
 @media screen and (max-width: 767px) {
     .activities_cards-30 {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 20px;
-        width: 100%;
         height: 193px;
         margin: 0 0 20px 0;
-        padding: 0;
-        aspect-ratio: auto;
     }
 }
 
@@ -916,10 +802,7 @@ input {
 
 @media screen and (max-width: 767px) {
     .img_activity {
-        width: 100%;
         height: 80%;
-        border-radius: 20px 20px 0 0;
-        aspect-ratio: 1/1;
     }
 }
 
@@ -933,10 +816,7 @@ input {
 
 @media screen and (max-width: 767px) {
     .img_activity-h-70 {
-        width: 100%;
         height: 80%;
-        border-radius: 20px 20px 0 0;
-        aspect-ratio: 1/1;
     }
 }
 
@@ -949,10 +829,7 @@ input {
 
 @media screen and (max-width: 767px) {
     .img_activity-h-50 {
-        width: 100%;
         height: 80%;
-        border-radius: 20px 20px 0 0;
-        aspect-ratio: 1/1;
     }
 }
 
@@ -965,10 +842,7 @@ input {
 
 @media screen and (max-width: 767px) {
     .img_activity-h-30 {
-        width: 100%;
         height: 80%;
-        border-radius: 20px 20px 0 0;
-        aspect-ratio: 1/1;
     }
 }
 
@@ -988,7 +862,6 @@ footer {
         font-size: 1em;
         flex-direction: column;
         align-items: start;
-        width: 100%;
         padding: 5px;
     }
 }
@@ -1003,13 +876,9 @@ footer {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
     .footer-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        width: 100%;
-        margin-left: 10px;
+        flex-direction: column;
     }
 }
 
